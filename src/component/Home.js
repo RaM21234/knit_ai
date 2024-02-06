@@ -71,8 +71,17 @@ const Home = () => {
     };
 
     return (
-        <>
-            <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+        <div >
+            <div
+                style={{
+                    background:
+                        'rgb(2, 0, 36)',
+                    background:
+                        'linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)',
+                }}
+
+                className=" py-6 flex flex-col justify-center sm:py-12">
+                <p class="text-white text-center mb-16 font-serif text-5xl font-extrabold">Knit Ai </p>
                 <div className="relative py-3 sm:max-w-xl sm:mx-auto">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
                     <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -83,6 +92,16 @@ const Home = () => {
                             <div className="divide-y divide-gray-200">
                                 <form onSubmit={handleSubmit} className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
 
+                                    <div className="relative">
+
+                                        <p>Write a query you want to know?</p>
+
+                                        <p>Like:
+                                            <br /> Who is Virat Kohli?
+                                            <br /> Who is Cristiano Ronaldo?
+                                            <br /> How to print from 1 to 10 in c++ using a while loop?
+                                        </p>
+                                    </div>
                                     <div className="relative">
                                         <input
                                             type="text"
@@ -110,7 +129,14 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+            <div
+                style={{
+                    background:
+                        'rgb(2, 0, 36)',
+                    background:
+                        'linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)',
+                }}
+                className="  py-6 flex flex-col justify-center sm:py-12">
                 <div className="relative py-3 sm:max-w-xl sm:mx-auto">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
                     <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -121,6 +147,16 @@ const Home = () => {
                             <div className="divide-y divide-gray-200">
                                 <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                                     <div className="relative">
+
+                                        <p>Write a query for planning a trip mentioning the destination and the no of days ?</p>
+
+                                        <p>Like:
+                                            <br /> 7 days trip to Thailand
+                                            <br /> 5 days trip to Paris
+                                        </p>
+                                    </div>
+                                    <div className="relative">
+
                                         <input
                                             type="text"
                                             value={number_of_days}
@@ -154,7 +190,7 @@ const Home = () => {
 
 
 
-        </>
+        </div>
     )
 }
 
