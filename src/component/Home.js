@@ -13,7 +13,7 @@ const Home = () => {
     const [destination, setDestination] = useState('Thailand');
     const [itinerary, setItinerary] = useState('');
 
-
+    const serverurl = 'https://knit-ai-backend2.onrender.com'
     const handleSubmit = async (event) => {
         setloading(true)
         event.preventDefault();
@@ -27,7 +27,7 @@ const Home = () => {
         };
 
         try {
-            const response = await axios.post('http://localhost:5000/solve-problem', payload);
+            const response = await axios.post(`${serverurl}/solve-problem`, payload);
             console.log(response?.data?.responseText);
             setresponse(response?.data?.responseText)
 
@@ -60,7 +60,7 @@ const Home = () => {
                     { name: "destination", value: destination }
                 ]
             }
-            const response = await axios.post('http://localhost:5000/travel-planner', payload,);
+            const response = await axios.post(`${serverurl}/travel-planner`, payload,);
             console.log(response?.data?.responseText)
             setItinerary(response?.data?.responseText);
         } catch (error) {
